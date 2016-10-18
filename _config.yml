@@ -1,0 +1,59 @@
+# Site settings
+title: QXSoftware
+header-img: "img/autumn2.jpg"
+tagline: ""
+description: "千里之行，始于足下。"
+baseurl: ""
+url: "http://qxsoftware.github.io"
+
+# About/contact
+owner:
+  name: "QXSoftware"
+  email: ls563566994@126.com
+  bio: "千里之行，始于足下。"
+
+# Data
+favicon: img/favicon.ico
+
+github_username: QXSoftware
+
+# Build settings
+# use Github Flavored Markdown !important
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
+
+gems:
+- jekyll-gallery-generator
+- jekyll-paginate
+permalink: none
+paginate: 8
+exclude: ["README.md"]
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Shanghai
+
+# Title
+
+
+# Defaults for posts
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "QXSoftware"
+      header-img: "img/fantasy.jpg" # We don't want posts without a header image, that whould mean white on white
+
+
+# Comments 
+comments :
+  provider : duoshuo
+  duoshuo :
+    short_name : qxsoftware
+
+# Links to include in footer navigation
