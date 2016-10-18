@@ -2,7 +2,7 @@
 layout: page
 title: "About"
 description: "嗯，这里是一些关于我的描述。"
-header-img: "/img/plane.jpg"
+header-img: "img/plane.jpg"
 ---
 
 我是一个热爱生活的人。我爱我的老婆！

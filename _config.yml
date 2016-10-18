@@ -1,6 +1,6 @@
 # Site settings
 title: QXSoftware
-header-img: "/img/autumn2.jpg"
+header-img: "img/autumn2.jpg"
 tagline: ""
 description: "千里之行，始于足下。"
 baseurl: ""
@@ -47,7 +47,7 @@ defaults:
     values:
       layout: "post"
       author: "QXSoftware"
-      header-img: "/img/fantasy.jpg" # We don't want posts without a header image, that whould mean white on white
+      header-img: "img/fantasy.jpg" # We don't want posts without a header image, that whould mean white on white
 
 
 # Comments 
