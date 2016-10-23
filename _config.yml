@@ -26,7 +26,6 @@ kramdown:
 highlighter: rouge
 
 gems:
-- jekyll-gallery-generator
 - jekyll-paginate
 permalink: none
 paginate: 8
