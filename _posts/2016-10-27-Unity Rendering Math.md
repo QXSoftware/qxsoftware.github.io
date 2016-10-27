@@ -7,6 +7,39 @@ tags: Unity 渲染 Shader
 
 ### 矩阵（Matrix）
 
+#### 矩阵性质
+
+* 不满足交换律
+
+	`AB ≠ BA`
+
+* 满足结合律
+
+	`ABCD = A(BC)D = AB(CD)`
+
+#### 特殊的矩阵
+
+* 方阵
+行数和列数相等的矩阵叫做方阵（Square Matrix），渲染常用的是 3x3 和 4x4 矩阵。如果除了对角线之外的元素都是 0，那么这个矩阵也叫做对角矩阵（Diagonal Matrix）。
+
+	方阵：
+	![](/post_img/square-matrix.png)
+
+	对角矩阵：
+	![](/post_img/diagonal-matrix.png)
+
+* 单位矩阵
+单位矩阵是对角线的元素都为 1 的对角矩阵。单位矩阵一般用 I 表示。
+
+	`MI = IM`
+
+	单位矩阵：
+	![](/post_img/identity-matrix.png)
+
+* 转置矩阵
+转置
+
+####  行向量还是列向量？
 
 > 首先要明确的是，Unity Shader 中使用的是列向量。
 
