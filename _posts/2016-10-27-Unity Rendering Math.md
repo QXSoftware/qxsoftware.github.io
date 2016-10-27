@@ -37,7 +37,7 @@ tags: Unity 渲染 Shader
 	![](/post_img/identity-matrix.jpg)
 
 * 转置矩阵
-转置矩阵（Transpose Matrix）就是将一个 m*n 的矩阵翻转过来变成 n*m 的矩阵。
+转置矩阵（Transpose Matrix）就是将一个 mxn 的矩阵翻转过来变成 nxm 的矩阵。
 
 	转置矩阵：
 	![](/post_img/transpose-matrix.jpg)
