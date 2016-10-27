@@ -11,11 +11,11 @@ tags: Unity 渲染 Shader
 
 * 不满足交换律
 
-	`AB ≠ BA`
+	*AB ≠ BA*
 
 * 满足结合律
 
-	`ABCD = A(BC)D = AB(CD)`
+	*ABCD = A(BC)D = AB(CD)*
 
 #### 特殊的矩阵
 
@@ -23,21 +23,58 @@ tags: Unity 渲染 Shader
 行数和列数相等的矩阵叫做方阵（Square Matrix），渲染常用的是 3x3 和 4x4 矩阵。如果除了对角线之外的元素都是 0，那么这个矩阵也叫做对角矩阵（Diagonal Matrix）。
 
 	方阵：
-	![](/post_img/square-matrix.png)
+	![](/post_img/square-matrix.jpg)
 
 	对角矩阵：
-	![](/post_img/diagonal-matrix.png)
+	![](/post_img/diagonal-matrix.jpg)
 
 * 单位矩阵
-单位矩阵是对角线的元素都为 1 的对角矩阵。单位矩阵一般用 I 表示。
+单位矩阵（Identity Matrix）是对角线的元素都为 1 的对角矩阵。单位矩阵一般用 I 表示。
 
-	`MI = IM`
+	*MI = IM*
 
 	单位矩阵：
-	![](/post_img/identity-matrix.png)
+	![](/post_img/identity-matrix.jpg)
 
 * 转置矩阵
-转置
+转置矩阵（Transpose Matrix）就是将一个 m*n 的矩阵翻转过来变成 n*m 的矩阵。
+
+	转置矩阵：
+	![](/post_img/transpose-matrix.jpg)
+
+* 逆矩阵
+首先，并不是所有的矩阵都有逆矩阵（Inverse Matrix）。矩阵 M 存在逆矩阵 M<sup>-1</sup> 的前提之一就是，M 必须是一个方阵。M 和 M<sup>-1</sup> 相乘得到单位矩阵：
+
+	*MM<sup>-1</sup> = M<sup>-1</sup>M = I*
+
+	逆矩阵有以下性质：
+
+	* 一个可逆矩阵的逆矩阵的逆矩阵是它本身
+
+		*(M<sup>-1</sup>)<sup>-1</sup> = M*
+
+	* 单位矩阵的逆矩阵还是单位矩阵
+
+		*I<sup>-1</sup> = I*
+
+	* 转置的逆矩阵是逆矩阵的转置
+
+		*(M<sup>T</sup>)<sup>-1</sup> = (M<sup>-1</sup>)<sup>T</sup>*
+
+	* 矩阵乘积的逆等于反向逆矩阵的乘积
+
+		*(ABCD)<sup>-1</sup> = D<sup>-1</sup>C<sup>-1</sup>B<sup>-1</sup>A<sup>-1</sup>*
+
+* 正交矩阵
+正交矩阵（Orthogonal Matrix）是方阵。如果 M 和 M<sup>T</sup> 的乘积是单位矩阵的话，则 M 是正交的。
+
+	*MM<sup>T</sup> = I*
+
+	这等价于，M 的逆矩阵等于转置矩阵。
+
+	*M<sup>-1</sup> = M<sup>T</sup>*
+
+> 在 Unity 中，旋转矩阵是正交矩阵，包含统一缩放比的缩放矩阵除以缩放系数 k 之后也是正交矩阵。
 
 ####  行向量还是列向量？
 
