@@ -7,7 +7,7 @@ tags: Unity 渲染 Shader
 
 ### 矩阵（Matrix）
 
-#### 矩阵性质
+#### 矩阵基本性质
 
 * 不满足交换律
 
@@ -29,7 +29,7 @@ tags: Unity 渲染 Shader
 	![](/post_img/diagonal-matrix.jpg)
 
 * 单位矩阵
-单位矩阵（Identity Matrix）是对角线的元素都为 1 的对角矩阵。单位矩阵一般用 I 表示。
+单位矩阵（Identity Matrix）是对角线的元素都为 1 的对角矩阵。单位矩阵一般用 <strong>I</strong> 表示。
 
 	<strong>MI = IM</strong>
 
@@ -53,7 +53,7 @@ tags: Unity 渲染 Shader
 		<strong>(ABCD)<sup>T</sup> = D<sup>T</sup>C<sup>T</sup>B<sup>T</sup>A<sup>T</sup></strong>
 
 * 逆矩阵
-首先，并不是所有的矩阵都有逆矩阵（Inverse Matrix）。矩阵 M 存在逆矩阵 M<sup>-1</sup> 的前提之一就是，M 必须是一个方阵。M 和 M<sup>-1</sup> 相乘得到单位矩阵：
+首先，并不是所有的矩阵都有逆矩阵（Inverse Matrix）。矩阵 <strong>M</strong> 存在逆矩阵 <strong>M<sup>-1</sup></strong> 的前提之一就是，<strong>M</strong> 必须是一个方阵。<strong>M</strong> 和 <strong>M<sup>-1</sup></strong> 相乘得到单位矩阵：
 
 	<strong>MM<sup>-1</sup> = M<sup>-1</sup>M = I</strong>
 
@@ -76,11 +76,11 @@ tags: Unity 渲染 Shader
 		<strong>(ABCD)<sup>-1</sup> = D<sup>-1</sup>C<sup>-1</sup>B<sup>-1</sup>A<sup>-1</sup></strong>
 
 * 正交矩阵
-正交矩阵（Orthogonal Matrix）是方阵。如果 M 和 M<sup>T</sup> 的乘积是单位矩阵的话，则 M 是正交的。
+正交矩阵（Orthogonal Matrix）是方阵。如果 <strong>M</strong> 和 <strong>M<sup>T</sup></strong> 的乘积是单位矩阵的话，则 <strong>M</strong> 是正交的。
 
 	<strong>MM<sup>T</sup> = I</strong>
 
-	这等价于，M 的逆矩阵等于转置矩阵。
+	这等价于，<strong>M</strong> 的逆矩阵等于转置矩阵。
 
 	<strong>M<sup>-1</sup> = M<sup>T</sup></strong>
 
@@ -115,3 +115,29 @@ tags: Unity 渲染 Shader
 或者将矩阵转置一下，用行向量乘法也是一样的：
 
 `o.pos = mul(v.position, transpose(UNITY_MATRIX_MVP));`
+
+### 空间变换（Transform）
+
+上面总结了矩阵的各种知识点，其实矩阵的意义就在于空间变换。
+
+#### 线性变换
+
+线性变换（Linear Transformation）的定义是，在线性空间 <strong>V</strong> 上的一个变换 <strong>A</strong> 称为线性变换，如果对于 <strong>V</strong> 中任意的元素 <strong>α</strong>，<strong>β</strong> 和数域 <strong>P</strong> 中任意 <strong>k</strong>，都有：
+
+![](/post_img/linear-transformation.jpg)
+
+典型的线性变换包括：缩放、旋转等。对于线性变换，我们只需要用一个 3x3 的矩阵就可以表示。平移不是线性变换。为了用矩阵表示平移，需要增加一个维度，这时就有了齐次坐标（Homogeneous Coordinate）。
+
+将线性变换和平移变换用一个矩阵表示，这就是仿射变换（Affine Transformation），这是一个 4x4 的矩阵：
+
+![](/post_img/final-matrix.jpg)
+
+其中 <strong>T<sup>3x1</sup></strong> 表示平移，<strong>M<sup>3x3</sup></strong> 表示缩放和旋转的乘积。
+
+#### 变换组合
+
+当我们想要表现一系列变换时，通常要按照一定顺序依次执行。由于矩阵满足结合律，所以可以将所有变换矩阵相乘得到一个矩阵。用这个矩阵去变换和依次变换的效果是一样的。
+
+Unity 处理变换的惯例是TRS（Translate Rotate Scale），实际的顺序是：缩放、旋转、平移。常用的 API 例如：
+
+`public static Matrix4x4 TRS(Vector3 pos, Quaternion q, Vector3 s);`
