@@ -42,6 +42,16 @@ tags: Unity 渲染 Shader
 	转置矩阵：
 	![](/post_img/transpose-matrix.jpg)
 
+	转置矩阵的性质：
+
+	* 转置的转置就是它本身
+
+		*(M<sup>T</sup>)<sup>T</sup> = M*
+
+	* 矩阵乘积的转置，等于各矩阵转置的逆序乘积
+
+		*(ABCD)<sup>T</sup> = D<sup>T</sup>C<sup>T</sup>B<sup>T</sup>A<sup>T</sup>*
+
 * 逆矩阵
 首先，并不是所有的矩阵都有逆矩阵（Inverse Matrix）。矩阵 M 存在逆矩阵 M<sup>-1</sup> 的前提之一就是，M 必须是一个方阵。M 和 M<sup>-1</sup> 相乘得到单位矩阵：
 
