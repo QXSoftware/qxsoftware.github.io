@@ -11,11 +11,11 @@ tags: Unity 渲染 Shader
 
 * 不满足交换律
 
-	*AB ≠ BA*
+	<strong>AB ≠ BA</strong>
 
 * 满足结合律
 
-	*ABCD = A(BC)D = AB(CD)*
+	<strong>ABCD = A(BC)D = AB(CD)</strong>
 
 #### 特殊的矩阵
 
@@ -31,7 +31,7 @@ tags: Unity 渲染 Shader
 * 单位矩阵
 单位矩阵（Identity Matrix）是对角线的元素都为 1 的对角矩阵。单位矩阵一般用 I 表示。
 
-	*MI = IM*
+	<strong>MI = IM</strong>
 
 	单位矩阵：
 	![](/post_img/identity-matrix.jpg)
@@ -46,43 +46,43 @@ tags: Unity 渲染 Shader
 
 	* 转置的转置就是它本身
 
-		*(M<sup>T</sup>)<sup>T</sup> = M*
+		<strong>(M<sup>T</sup>)<sup>T</sup> = M</strong>
 
 	* 矩阵乘积的转置，等于各矩阵转置的逆序乘积
 
-		*(ABCD)<sup>T</sup> = D<sup>T</sup>C<sup>T</sup>B<sup>T</sup>A<sup>T</sup>*
+		<strong>(ABCD)<sup>T</sup> = D<sup>T</sup>C<sup>T</sup>B<sup>T</sup>A<sup>T</sup></strong>
 
 * 逆矩阵
 首先，并不是所有的矩阵都有逆矩阵（Inverse Matrix）。矩阵 M 存在逆矩阵 M<sup>-1</sup> 的前提之一就是，M 必须是一个方阵。M 和 M<sup>-1</sup> 相乘得到单位矩阵：
 
-	*MM<sup>-1</sup> = M<sup>-1</sup>M = I*
+	<strong>MM<sup>-1</sup> = M<sup>-1</sup>M = I</strong>
 
 	逆矩阵有以下性质：
 
 	* 一个可逆矩阵的逆矩阵的逆矩阵是它本身
 
-		*(M<sup>-1</sup>)<sup>-1</sup> = M*
+		<strong>(M<sup>-1</sup>)<sup>-1</sup> = M</strong>
 
 	* 单位矩阵的逆矩阵还是单位矩阵
 
-		*I<sup>-1</sup> = I*
+		<strong>I<sup>-1</sup> = I</strong>
 
 	* 转置的逆矩阵是逆矩阵的转置
 
-		*(M<sup>T</sup>)<sup>-1</sup> = (M<sup>-1</sup>)<sup>T</sup>*
+		<strong>(M<sup>T</sup>)<sup>-1</sup> = (M<sup>-1</sup>)<sup>T</sup></strong>
 
 	* 矩阵乘积的逆等于反向逆矩阵的乘积
 
-		*(ABCD)<sup>-1</sup> = D<sup>-1</sup>C<sup>-1</sup>B<sup>-1</sup>A<sup>-1</sup>*
+		<strong>(ABCD)<sup>-1</sup> = D<sup>-1</sup>C<sup>-1</sup>B<sup>-1</sup>A<sup>-1</sup></strong>
 
 * 正交矩阵
 正交矩阵（Orthogonal Matrix）是方阵。如果 M 和 M<sup>T</sup> 的乘积是单位矩阵的话，则 M 是正交的。
 
-	*MM<sup>T</sup> = I*
+	<strong>MM<sup>T</sup> = I</strong>
 
 	这等价于，M 的逆矩阵等于转置矩阵。
 
-	*M<sup>-1</sup> = M<sup>T</sup>*
+	<strong>M<sup>-1</sup> = M<sup>T</sup></strong>
 
 > 在 Unity 中，旋转矩阵是正交矩阵，包含统一缩放比的缩放矩阵除以缩放系数 k 之后也是正交矩阵。
 
