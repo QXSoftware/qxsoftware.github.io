@@ -5,6 +5,26 @@ tags: Unity 渲染 Shader
 
 ## Unity Shader 编写所必须的基础数学知识
 
+### 笛卡尔坐标系（Cartesian Coordinate System）
+
+我们平时使用的坐标系就是笛卡尔坐标系，它分为左手坐标系和右手坐标系。<strong>Unity 使用的是左手坐标系。</strong>
+
+### 向量
+
+#### 点积（Dot Product）
+
+两个向量的点积的结果是一个标量。
+
+![](/post_img/dot-product.jpg)
+
+![](/post_img/dot-product2.jpg)
+
+
+#### 叉积（Cross Product）
+
+两个向量的叉积是一个垂直于这两个向量的向量。这个向量的方向和使用左手坐标系还是右手坐标系有关。
+
+
 ### 矩阵（Matrix）
 
 #### 矩阵基本性质
