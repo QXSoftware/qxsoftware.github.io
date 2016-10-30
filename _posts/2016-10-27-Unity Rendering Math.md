@@ -1,5 +1,6 @@
 ---
 title: 渲染所需的数学知识
+header-img: autumn2
 tags: Unity 渲染 Shader
 ---
 
