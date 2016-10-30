@@ -32,11 +32,11 @@ v2f vert (appdata v)
 	
 	// 方式二
 
-	o.vertex = mul(UNITY_MATRIX_P, mul(UNITY_MATRIX_V, mul(unity_ObjectToWorld, v.vertex)));
+	o.vertex = mul(UNITY_MATRIX_P, mul(UNITY_MATRIX_V, mul(_Object2World, v.vertex)));
 	
 	// 方式三
 	
-	o.vertex = mul(UNITY_MATRIX_VP, mul(unity_ObjectToWorld, v.vertex));
+	o.vertex = mul(UNITY_MATRIX_VP, mul(_Object2World, v.vertex));
 
 	// 方式四，通过构造一个模型观察投影矩阵，然后变换顶点坐标
 	
