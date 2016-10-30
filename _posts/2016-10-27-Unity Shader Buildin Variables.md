@@ -17,7 +17,7 @@ tags: Unity 渲染 Shader
 
 有了这些矩阵，在 vertex shader 中进行顶点变换就可以有多种选择：
 
-{% highlight shader %}
+{% highlight C %}
 
 v2f vert (appdata v)
 {
