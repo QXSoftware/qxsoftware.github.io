@@ -49,11 +49,25 @@ Unity 内置了几个 RenderQueue 的字面值：
 |---------------------|-----------|-----------------------------------------------------------------------------------------------|
 |     Background      |   1000    | 这个渲染队列最先渲染，一般用于渲染背景                                                        |
 |  Geometry(默认值)   |   2000    | 这个渲染队列是大多数物体的默认队列，用于渲染不透明物体                                        |
-|     AlphaTest       |   2456    | 使用了 AlphaTest 的物体在这个队列渲染，当所有的不透明物体都渲染完了再渲染这个，有助于提升性能 |
+|     AlphaTest       |   2450    | 使用了 AlphaTest 的物体在这个队列渲染，当所有的不透明物体都渲染完了再渲染这个，有助于提升性能 |
 |    Transparent      |   3000    | 在 Geometry 和 AlphaTest 之后、从后往前渲染，所有的半透明物体都应该在这里渲染                 |
 |      Overlay        |   4000    | 在之前的所有渲染队列都渲染完了之后渲染，比如镜头光晕                                          |
 
 可以看到，RenderQueue 越大，渲染越靠后。
+
+##### Camera.opaqueSortMode
+
+默认情况下，不透明物体被放在粗略分隔的从前往后排布的桶中，GPU 按照这种方式渲染能节省性能。但是也有部分 GPU 不这么干，比如 PowerVR。Camera.opaqueSortMode 这个值的默认值是 Dafault，根据不同硬件平台，这个值有可能是：OpaqueSortMode.FrontToBack 或者 OpaqueSortMode.NoDistanceSort。我们也可以主动设置这个值为某一种。比如为了减少 CPU 消耗，把这个值设置为 NoDistanceSort。
+
+所以，不透明物体大部分情况下是按照从前往后渲染，也就是离相机越近，越先渲染。
+
+如果是手动选择了 FrontToBack，就是从前往后渲染；如果是 NoDistanceSort，就是从后往前渲染。
+
+> 根据实际测试，渲染的顺序并不是完全按照物体几何中心离相机的距离进行排序，而是一个近似的排序。
+
+##### Camera.transparencySortMode
+
+按照我测试用的 Unity5.3.4f1，修改这个值也会影响不透明物体的渲染顺序。所以这个东西很可能不重要，而且有 bug。
 
 ##### SortingLayer
 
