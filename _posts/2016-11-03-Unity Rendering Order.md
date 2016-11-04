@@ -71,7 +71,22 @@ Unity 内置了几个 RenderQueue 的字面值：
 
 ##### SortingLayer
 
+SortingLayer 拥有最高优先级，如果 SortingLayer 不同，则首先按照 SortingLayer 排序；如果 SortingLayer 相同，再按照 RenderQueue 排序。
 
+如下图所示，有 6 个立方体，分别按顺序在摄像机前排开：
+
+![](/post_img/render-queue/preview.png)
+![](/post_img/render-queue/cubes.jpg)
+
+其中，g1 组的立方体 SortingLayer 都是 Layer3，RenderQueue 都是 3000；g2 组的立方体 SortingLayer 都是 Layer2，RenderQueue 都是3500，最终渲染顺序是：<strong>g2m1 g2m2 g2m3 g1m1 g1m2 g1m3</strong>。
+
+直观地说，就是 SortingLayer 越大，则物体<strong>层级</strong>越高。SortingLayer 默认只有一个：Default，越往后添加的 SortingLayer 越大。
+
+现在把 g1 组的立方体 SortingLayer 改成 Layer2，RenderQueue 改成 3600，最终渲染顺序还是：<strong>g2m1 g2m2 g2m3 g1m1 g1m2 g1m3</strong>。
+
+直观地说，SortingLayer 相同的前提下，RenderQueue 越大，则物体<strong>层级</strong>越高。
+
+> 以上结论是通过 Frame Debugger 单步执行得出的。
 
 参考资料：
 
