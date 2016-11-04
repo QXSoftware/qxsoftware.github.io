@@ -14,7 +14,7 @@ tags: Unity 渲染
 
 ![](/post_img/mesh-renderer-inspector.jpg)
 
-如何添加新的 SortingLayer？请通过 <strong>Edit→Project Settings→Tags and Layers</strong> 菜单选项打开：
+如何添加新的 SortingLayer？请通过 <strong>Edit/Project Settings/Tags and Layers</strong> 菜单选项打开：
 
 ![](/post_img/tags-layers.jpg)
 
