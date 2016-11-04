@@ -86,6 +86,8 @@ SortingLayer 拥有最高优先级，如果 SortingLayer 不同，则首先按�
 
 直观地说，SortingLayer 相同的前提下，RenderQueue 越大，则物体<strong>层级</strong>越高。
 
+##### SortingOrder
+
 如果 SortingLayer 和 RenderQueue 都一样，则 SortingOrder 越大，则物体<strong>层级</strong>越高。
 
 如果只是 SortingLayer 一样，RenderQueue 和 SortingOrder 都不一样，则物体的<strong>层级</strong>由 RenderQueue 和 SortingOrder 之和决定，相加之和越大，<strong>层级</strong>越高。
