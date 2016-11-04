@@ -12,13 +12,21 @@ tags: Unity 渲染
 
 效果如下：
 
-![](/post_img/mesh-renderer-inspector.jpg)
+![](/post_img/render-queue/mesh-renderer-inspector.jpg)
 
 如何添加新的 SortingLayer？请通过 <strong>Edit/Project Settings/Tags and Layers</strong> 菜单选项打开：
 
-![](/post_img/tags-layers.jpg)
+![](/post_img/render-queue/tags-layers.jpg)
 
 然后添加三个 Sorting Layer，如上图所示。注意，Sorting Layer 添加后是可以拖动调整顺序的。
+
+便捷修改 Camera 的 opaqueSortMode 和 transparencySortMode：
+
+[CameraInspector.cs](https://gist.github.com/QXSoftware/1821915377e333e45f7a632ae07e64aa)
+
+效果如下：
+
+![](/post_img/render-queue/sort-mode.jpg)
 
 #### 实际测试
 
