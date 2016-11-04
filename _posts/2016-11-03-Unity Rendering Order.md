@@ -12,7 +12,7 @@ tags: Unity 渲染
 
 效果如下：
 
-![](/post_img/mesh-render-inspector.jpg)
+![](/post_img/mesh-renderer-inspector.jpg)
 
 如何添加新的 SortingLayer？请通过 <strong>Edit→Project Settings→Tags and Layers</strong> 菜单选项打开：
 
