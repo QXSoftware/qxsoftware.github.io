@@ -94,6 +94,10 @@ SortingLayer 拥有最高优先级，如果 SortingLayer 不同，则首先按�
 
 > 以上结论是通过 Frame Debugger 单步执行得出的。
 
+##### Camera.depth
+
+还有一个很常用的调整渲染顺序的选项：摄像机深度。摄像机深度是优先级最高的选项，深度值越大，物体<strong>层级</strong>越高。常用的比如 NGUI 就是用一个单独的相机（深度值比渲染场景的相机大）来渲染 UI，这样就保证 UI 在所有东西上方。
+
 参考资料：
 
 [Transparency and sorting in Unity](https://jakobknudsen.wordpress.com/2013/07/20/transparency-and-sorting/)
