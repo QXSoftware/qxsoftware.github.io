@@ -35,13 +35,13 @@ published: true
 
 镜面高光来自于某个方向，并且倾向于从表面向某个特定方向反射。高光会随视角变化。
 
-* phong
+* Phong
 
 	**c<sub>specular</sub> = c<sub>light</sub> \* c<sub>material</sub> \* max(0, dot(V, R))<sup>gloss</sup>**
 
 	![phong](/post_img/light-model/phong.jpg)
 
-* blinn phong
+* Blinn-Phong
 
 	**c<sub>specular</sub> = c<sub>light</sub> \* c<sub>material</sub> \* max(0, dot(N, H))<sup>gloss</sup>**
 
