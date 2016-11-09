@@ -166,7 +166,7 @@ tags: Unity 渲染 Shader
 
 给定一个空间**P**，和子空间**C**，现在知道子空间的坐标轴在**P**中的表示：**x<sub>c</sub>**，**y<sub>c</sub>**，**z<sub>c</sub>**，则从**C**到**P**的转换矩阵为：
 
-![](/post_img/c-p.jpg)
+**M<sub>c->p</sub> = [**x<sup>T</sup><sub>c</sub>** **y<sup>T</sup><sub>c</sub>** **z<sup>T</sup><sub>c</sub>**]**
 
 #### 变换组合
 
