@@ -105,6 +105,13 @@ tags: Unity 渲染 Shader
 
 	<strong>M<sup>-1</sup> = M<sup>T</sup></strong>
 
+正交矩阵的条件：
+
++ 每一行都是单位矩阵
++ 每一行之间都相互垂直
+
+正交矩阵由一组**标准正交基**构成。
+
 > 在 Unity 中，旋转矩阵是正交矩阵，包含统一缩放比的缩放矩阵除以缩放系数 k 之后也是正交矩阵。
 
 ####  行向量还是列向量？
@@ -154,6 +161,12 @@ tags: Unity 渲染 Shader
 ![](/post_img/final-matrix.jpg)
 
 其中 <strong>T<sup>3x1</sup></strong> 表示平移，<strong>M<sup>3x3</sup></strong> 表示缩放和旋转的乘积。
+
+#### 坐标空间转换
+
+给定一个空间**P**，和子空间**C**，现在知道子空间的坐标轴在**P**中的表示：**x<sub>c</sub>**，**y<sub>c</sub>**，**z<sub>c</sub>**，则从**C**到**P**的转换矩阵为：
+
+![](/post_img/c-p.jpg)
 
 #### 变换组合
 
