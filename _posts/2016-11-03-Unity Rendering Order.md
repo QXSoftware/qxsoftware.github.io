@@ -14,7 +14,7 @@ tags: Unity 渲染
 
 ![](/post_img/render-queue/mesh-renderer-inspector.jpg)
 
-如何添加新的 SortingLayer？请通过 <strong>Edit/Project Settings/Tags and Layers</strong> 菜单选项打开：
+如何添加新的 SortingLayer？请通过 **Edit/Project Settings/Tags and Layers** 菜单选项打开：
 
 ![](/post_img/render-queue/tags-layers.jpg)
 
@@ -41,7 +41,7 @@ tags: Unity 渲染
 
 RenderQueue 是材质（Material）的关键属性，当我们在 Unity 中创建一个材质后，Unity 会给这个材质设置一个默认 Shader，然后这个材质的 RenderQueue 被改为其 Shader 中设定的 RenderQueue。如果给这个材质球换了 Shader，Unity 会更新它的 RenderQueue（但是请注意，假如当前材质的 Shader 的 RenderQueue 是 3000，然后你修改 Shader 让其 RenderQueue 变成 3100，对应材质球的 RenderQueue 并不会更新！）。
 
-<strong>Unity 最终以 Material 的 RenderQueue 为准。</strong>
+**Unity 最终以 Material 的 RenderQueue 为准。**
 
 Unity 内置了几个 RenderQueue 的字面值：
 
@@ -78,25 +78,25 @@ SortingLayer 拥有最高优先级，如果 SortingLayer 不同，则首先按�
 ![](/post_img/render-queue/preview.png)
 ![](/post_img/render-queue/cubes.jpg)
 
-其中，g1 组的立方体 SortingLayer 都是 Layer3，RenderQueue 都是 3000；g2 组的立方体 SortingLayer 都是 Layer2，RenderQueue 都是3500，最终渲染顺序是：<strong>g2m1 g2m2 g2m3 g1m1 g1m2 g1m3</strong>。
+其中，g1 组的立方体 SortingLayer 都是 Layer3，RenderQueue 都是 3000；g2 组的立方体 SortingLayer 都是 Layer2，RenderQueue 都是3500，最终渲染顺序是：**g2m1 g2m2 g2m3 g1m1 g1m2 g1m3**。
 
-直观地说，就是 SortingLayer 越大，则物体<strong>层级</strong>越高。SortingLayer 默认只有一个：Default，越往后添加的 SortingLayer 越大。
+直观地说，就是 SortingLayer 越大，则物体**层级**越高。SortingLayer 默认只有一个：Default，越往后添加的 SortingLayer 越大。
 
-现在把 g1 组的立方体 SortingLayer 改成 Layer2，RenderQueue 改成 3600，最终渲染顺序还是：<strong>g2m1 g2m2 g2m3 g1m1 g1m2 g1m3</strong>。
+现在把 g1 组的立方体 SortingLayer 改成 Layer2，RenderQueue 改成 3600，最终渲染顺序还是：**g2m1 g2m2 g2m3 g1m1 g1m2 g1m3**。
 
-直观地说，SortingLayer 相同的前提下，RenderQueue 越大，则物体<strong>层级</strong>越高。
+直观地说，SortingLayer 相同的前提下，RenderQueue 越大，则物体**层级**越高。
 
 ##### SortingOrder
 
-如果 SortingLayer 和 RenderQueue 都一样，则 SortingOrder 越大，则物体<strong>层级</strong>越高。
+如果 SortingLayer 和 RenderQueue 都一样，则 SortingOrder 越大，则物体**层级**越高。
 
-如果只是 SortingLayer 一样，RenderQueue 和 SortingOrder 都不一样，则物体的<strong>层级</strong>由 RenderQueue 和 SortingOrder 之和决定，相加之和越大，<strong>层级</strong>越高。
+如果只是 SortingLayer 一样，RenderQueue 和 SortingOrder 都不一样，则物体的**层级**由 RenderQueue 和 SortingOrder 之和决定，相加之和越大，**层级**越高。
 
 > 以上结论是通过 Frame Debugger 单步执行得出的。
 
 ##### Camera.depth
 
-还有一个很常用的调整渲染顺序的选项：摄像机深度。摄像机深度是优先级最高的选项，深度值越大，物体<strong>层级</strong>越高。常用的比如 NGUI 就是用一个单独的相机（深度值比渲染场景的相机大）来渲染 UI，这样就保证 UI 在所有东西上方。
+还有一个很常用的调整渲染顺序的选项：摄像机深度。摄像机深度是优先级最高的选项，深度值越大，物体**层级**越高。常用的比如 NGUI 就是用一个单独的相机（深度值比渲染场景的相机大）来渲染 UI，这样就保证 UI 在所有东西上方。
 
 参考资料：
 
