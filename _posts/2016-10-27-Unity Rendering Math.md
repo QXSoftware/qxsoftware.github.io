@@ -8,7 +8,7 @@ tags: Unity 渲染 Shader
 
 ### 笛卡尔坐标系（Cartesian Coordinate System）
 
-我们平时使用的坐标系就是笛卡尔坐标系，它分为左手坐标系和右手坐标系。<strong>Unity 使用的是左手坐标系。</strong>
+我们平时使用的坐标系就是笛卡尔坐标系，它分为左手坐标系和右手坐标系。**Unity 使用的是左手坐标系。**
 
 ### 向量
 
@@ -32,11 +32,11 @@ tags: Unity 渲染 Shader
 
 * 不满足交换律
 
-	<strong>AB ≠ BA</strong>
+	**AB ≠ BA**
 
 * 满足结合律
 
-	<strong>ABCD = A(BC)D = AB(CD)</strong>
+	**ABCD = A(BC)D = AB(CD)**
 
 #### 特殊的矩阵
 
@@ -50,9 +50,9 @@ tags: Unity 渲染 Shader
 	![](/post_img/diagonal-matrix.jpg)
 
 * 单位矩阵
-单位矩阵（Identity Matrix）是对角线的元素都为 1 的对角矩阵。单位矩阵一般用 <strong>I</strong> 表示。
+单位矩阵（Identity Matrix）是对角线的元素都为 1 的对角矩阵。单位矩阵一般用 **I** 表示。
 
-	<strong>MI = IM</strong>
+	**MI = IM**
 
 	单位矩阵：
 	![](/post_img/identity-matrix.jpg)
@@ -67,43 +67,43 @@ tags: Unity 渲染 Shader
 
 	* 转置的转置就是它本身
 
-		<strong>(M<sup>T</sup>)<sup>T</sup> = M</strong>
+		**(M<sup>T</sup>)<sup>T</sup> = M**
 
 	* 矩阵乘积的转置，等于各矩阵转置的逆序乘积
 
-		<strong>(ABCD)<sup>T</sup> = D<sup>T</sup>C<sup>T</sup>B<sup>T</sup>A<sup>T</sup></strong>
+		**(ABCD)<sup>T</sup> = D<sup>T</sup>C<sup>T</sup>B<sup>T</sup>A<sup>T</sup>**
 
 * 逆矩阵
-首先，并不是所有的矩阵都有逆矩阵（Inverse Matrix）。矩阵 <strong>M</strong> 存在逆矩阵 <strong>M<sup>-1</sup></strong> 的前提之一就是，<strong>M</strong> 必须是一个方阵。<strong>M</strong> 和 <strong>M<sup>-1</sup></strong> 相乘得到单位矩阵：
+首先，并不是所有的矩阵都有逆矩阵（Inverse Matrix）。矩阵 **M** 存在逆矩阵 **M<sup>-1</sup>** 的前提之一就是，**M** 必须是一个方阵。**M** 和 **M<sup>-1</sup>** 相乘得到单位矩阵：
 
-	<strong>MM<sup>-1</sup> = M<sup>-1</sup>M = I</strong>
+	**MM<sup>-1</sup> = M<sup>-1</sup>M = I**
 
 	逆矩阵有以下性质：
 
 	* 一个可逆矩阵的逆矩阵的逆矩阵是它本身
 
-		<strong>(M<sup>-1</sup>)<sup>-1</sup> = M</strong>
+		**(M<sup>-1</sup>)<sup>-1</sup> = M**
 
 	* 单位矩阵的逆矩阵还是单位矩阵
 
-		<strong>I<sup>-1</sup> = I</strong>
+		**I<sup>-1</sup> = I**
 
 	* 转置的逆矩阵是逆矩阵的转置
 
-		<strong>(M<sup>T</sup>)<sup>-1</sup> = (M<sup>-1</sup>)<sup>T</sup></strong>
+		**(M<sup>T</sup>)<sup>-1</sup> = (M<sup>-1</sup>)<sup>T</sup>**
 
 	* 矩阵乘积的逆等于反向逆矩阵的乘积
 
-		<strong>(ABCD)<sup>-1</sup> = D<sup>-1</sup>C<sup>-1</sup>B<sup>-1</sup>A<sup>-1</sup></strong>
+		**(ABCD)<sup>-1</sup> = D<sup>-1</sup>C<sup>-1</sup>B<sup>-1</sup>A<sup>-1</sup>**
 
 * 正交矩阵
-正交矩阵（Orthogonal Matrix）是方阵。如果 <strong>M</strong> 和 <strong>M<sup>T</sup></strong> 的乘积是单位矩阵的话，则 <strong>M</strong> 是正交的。
+正交矩阵（Orthogonal Matrix）是方阵。如果 **M** 和 **M<sup>T</sup>** 的乘积是单位矩阵的话，则 **M** 是正交的。
 
-	<strong>MM<sup>T</sup> = I</strong>
+	**MM<sup>T</sup> = I**
 
-	这等价于，<strong>M</strong> 的逆矩阵等于转置矩阵。
+	这等价于，**M** 的逆矩阵等于转置矩阵。
 
-	<strong>M<sup>-1</sup> = M<sup>T</sup></strong>
+	**M<sup>-1</sup> = M<sup>T</sup>**
 
 正交矩阵的条件：
 
@@ -150,7 +150,7 @@ tags: Unity 渲染 Shader
 
 #### 线性变换
 
-线性变换（Linear Transformation）的定义是，在线性空间 <strong>V</strong> 上的一个变换 <strong>A</strong> 称为线性变换，如果对于 <strong>V</strong> 中任意的元素 <strong>α</strong>，<strong>β</strong> 和数域 <strong>P</strong> 中任意 <strong>k</strong>，都有：
+线性变换（Linear Transformation）的定义是，在线性空间 **V** 上的一个变换 **A** 称为线性变换，如果对于 **V** 中任意的元素 **α**，**β** 和数域 **P** 中任意 **k**，都有：
 
 ![](/post_img/linear-transformation.jpg)
 
@@ -160,11 +160,11 @@ tags: Unity 渲染 Shader
 
 ![](/post_img/final-matrix.jpg)
 
-其中 <strong>T<sup>3x1</sup></strong> 表示平移，<strong>M<sup>3x3</sup></strong> 表示缩放和旋转的乘积。
+其中 **T<sup>3x1</sup>** 表示平移，**M<sup>3x3</sup>** 表示缩放和旋转的乘积。
 
 #### 坐标空间转换
 
-给定一个空间**P**，和子空间**C**，现在知道子空间的坐标轴在**P**中的表示：**x<sub>c</sub>**，**y<sub>c</sub>**，**z<sub>c</sub>**，则从**C**到**P**的转换矩阵为：
+给定一个空间 **P**，和子空间 **C**，现在知道子空间的坐标轴在 **P** 中的表示：**x<sub>c</sub>**，**y<sub>c</sub>**，**z<sub>c</sub>**，则从 **C** 到 **P** 的转换矩阵为：
 
 **M<sub>c→p</sub>** = [**x<sup>T</sup><sub style="margin:0 0 0 -6px;">c</sub> y<sup>T</sup><sub style="margin:0 0 0 -6px;">c</sub> z<sup>T</sup><sub style="margin:0 0 0 -6px;">c</sub>**]
 
