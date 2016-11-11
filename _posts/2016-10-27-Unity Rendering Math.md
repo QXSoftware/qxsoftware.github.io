@@ -16,9 +16,9 @@ tags: Unity 渲染 Shader
 
 两个向量的点积的结果是一个标量。
 
-![](/post_img/dot-product.jpg)
+![](/post_img/math/dot-product.jpg)
 
-![](/post_img/dot-product2.jpg)
+![](/post_img/math/dot-product2.jpg)
 
 
 #### 叉积（Cross Product）
@@ -44,10 +44,10 @@ tags: Unity 渲染 Shader
 行数和列数相等的矩阵叫做方阵（Square Matrix），渲染常用的是 3x3 和 4x4 矩阵。如果除了对角线之外的元素都是 0，那么这个矩阵也叫做对角矩阵（Diagonal Matrix）。
 
 	方阵：
-	![](/post_img/square-matrix.jpg)
+	![](/post_img/math/square-matrix.jpg)
 
 	对角矩阵：
-	![](/post_img/diagonal-matrix.jpg)
+	![](/post_img/math/diagonal-matrix.jpg)
 
 * 单位矩阵
 单位矩阵（Identity Matrix）是对角线的元素都为 1 的对角矩阵。单位矩阵一般用 **I** 表示。
@@ -55,13 +55,13 @@ tags: Unity 渲染 Shader
 	**MI = IM**
 
 	单位矩阵：
-	![](/post_img/identity-matrix.jpg)
+	![](/post_img/math/identity-matrix.jpg)
 
 * 转置矩阵
 转置矩阵（Transpose Matrix）就是将一个 mxn 的矩阵翻转过来变成 nxm 的矩阵。
 
 	转置矩阵：
-	![](/post_img/transpose-matrix.jpg)
+	![](/post_img/math/transpose-matrix.jpg)
 
 	转置矩阵的性质：
 
@@ -120,21 +120,21 @@ tags: Unity 渲染 Shader
 
 列向量：
 
-![列向量](/post_img/column-vector.jpg)
+![列向量](/post_img/math/column-vector.jpg)
 
 行向量：
 
-![行向量](/post_img/row-vector.jpg)
+![行向量](/post_img/math/row-vector.jpg)
 
 > 行向量和列向量与矩阵相乘的结果是不一样的，所以必须事先清楚用的是行向量还是列向量。
 
 行向量相乘：
 
-![](/post_img/row-vector-mul.jpg)
+![](/post_img/math/row-vector-mul.jpg)
 
 列向量相乘：
 
-![](/post_img/column-vector-mul.jpg)
+![](/post_img/math/column-vector-mul.jpg)
 
 由于 Unity 使用列向量，所以一般情况下，矩阵乘法都是右乘，例如将顶点坐标从模型空间变换到裁剪空间：
 
@@ -152,13 +152,13 @@ tags: Unity 渲染 Shader
 
 线性变换（Linear Transformation）的定义是，在线性空间 **V** 上的一个变换 **A** 称为线性变换，如果对于 **V** 中任意的元素 **α**，**β** 和数域 **P** 中任意 **k**，都有：
 
-![](/post_img/linear-transformation.jpg)
+![](/post_img/math/linear-transformation.jpg)
 
 典型的线性变换包括：缩放、旋转等。对于线性变换，我们只需要用一个 3x3 的矩阵就可以表示。平移不是线性变换。为了用矩阵表示平移，需要增加一个维度，这时就有了齐次坐标（Homogeneous Coordinate）。
 
 将线性变换和平移变换用一个矩阵表示，这就是仿射变换（Affine Transformation），这是一个 4x4 的矩阵：
 
-![](/post_img/final-matrix.jpg)
+![](/post_img/math/final-matrix.jpg)
 
 其中 **T<sup>3x1</sup>** 表示平移，**M<sup>3x3</sup>** 表示缩放和旋转的乘积。
 
