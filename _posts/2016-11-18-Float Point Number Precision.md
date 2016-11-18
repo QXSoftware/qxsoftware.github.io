@@ -11,7 +11,7 @@ published: true
 
 浮点数是按照 **符号位 + 指数位 + 小数位** 来存储的。按照位数的不同，分为单精度浮点数和双精度浮点数。
 
-### 单精度浮点数（float）
+### 单精度浮点数（float/single）
 
 ![single](/post_img/float-precision/float.png)
 
