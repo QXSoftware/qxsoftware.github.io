@@ -73,7 +73,7 @@ published: true
 
 二进制补码是现在使用最广泛的有符号数表示法。对于一个 **n** 位的二进制数 **a<sub>n-1</sub>a<sub>n-2</sub>...a<sub>0</sub>**，它的值为：
 
-![two's-complement](/post_img/number-complement/two's-complement.svg)
+![two's-complement](/post_img/number-complement/two's-complement.png)
 
 二进制有符号数的第一位（MSB）是符号位，0 表示正数，1 表示负数。用补码可以表示的数值范围是：-2<sup>n-1</sup> ~ 2<sup>n-1</sup>-1，所以一个 8 位有符号数的范围是 -128~127。
 
