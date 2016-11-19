@@ -17,8 +17,8 @@ published: true
 
 单精度浮点数的第 1 位是符号位。后面 8 位是指数部分，用 **e** 表示，**e** 的范围是 -126 ~ 127，因为 **00000000** 和 **11111111** 设计为保留用。再后面 23 位是小数位。所以一个 32 位的浮点数的十进制值为：
 
-![float value](/post_img/float-precision/float-val.svg)
-![float value2](/post_img/float-precision/float-val2.svg)
+![float value](/post_img/float-precision/float-val.png)
+![float value2](/post_img/float-precision/float-val2.png)
 
 以上图这个单精度浮点数为例，它的计算过程如下：
 
