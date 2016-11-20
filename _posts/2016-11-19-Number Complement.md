@@ -88,5 +88,5 @@ published: true
 
 + [Method of complements](https://en.wikipedia.org/wiki/Method_of_complements)
 + [Signed number representations](https://en.wikipedia.org/wiki/Signed_number_representations)
-+ [One's complement](https://en.wikipedia.org/wiki/Ones'_complement)
++ [Ones' complement](https://en.wikipedia.org/wiki/Ones'_complement)
 + [Two's complement](https://en.wikipedia.org/wiki/Two's_complement)
