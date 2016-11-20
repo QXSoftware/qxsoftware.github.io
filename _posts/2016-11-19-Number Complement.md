@@ -56,7 +56,7 @@ published: true
 + Base −2
 + Google's Protocol Buffers zig-zag encoding
 
-其中，Ones' complement 和上面举例说明的 Nine's complement 相似，就是用全是 1 的位串按位减去目标数的每一位，这个结果和把目标数的每一位按位取反是一样的，所以 Ones' complement 又称“反码”。
+其中，Ones' complement 和上面举例说明的 Nines' complement 相似，就是用全是 1 的位串按位减去目标数的每一位，这个结果和把目标数的每一位按位取反是一样的，所以 Ones' complement 又称“反码”。
 
 ```
 

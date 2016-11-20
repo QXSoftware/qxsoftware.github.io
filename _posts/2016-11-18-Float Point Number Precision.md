@@ -15,7 +15,7 @@ published: true
 
 ![single](/post_img/float-precision/float.png)
 
-单精度浮点数的第 1 位是符号位。后面 8 位是指数部分，用 **e** 表示。指数部分按照 IEEE 754 binary32 标准可以是有符号或者无符号数（补码）。如果是有符号数，则取值范围是 -128~127；如果是无符号数，则取值范围是 0~255（全0和全1按照标准被保留），并且需要减去一个 127 的偏移量，所以取值范围是 -126~127。再后面 23 位是小数位。所以一个 32 位的浮点数的十进制值为：
+单精度浮点数的第 1 位是符号位。后面 8 位是指数部分，用 **e** 表示。指数部分按照 [IEEE 754 binary32](https://en.wikipedia.org/wiki/IEEE_floating_point#IEEE_754-2008) 标准可以是有符号或者无符号数（补码）。如果是有符号数，则取值范围是 -128~127；如果是无符号数，则取值范围是 0~255（全0和全1按照标准被保留），并且需要减去一个 127 的偏移量，所以取值范围是 -126~127。再后面 23 位是小数位。所以一个 32 位的浮点数的十进制值为：
 
 ![float value](/post_img/float-precision/float-val.png)
 ![float value2](/post_img/float-precision/float-val2.png)
