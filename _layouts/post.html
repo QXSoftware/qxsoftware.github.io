@@ -40,7 +40,14 @@ layout: default
 
                 <hr/>
 
-                转载请注明出处：<a href="{{ page.url | prepend: site.baseurl | replace: '//', '/' }}">{{ page.url | absolute_url }}</a>
+                转载请注明出处：<a id="republish"></a>
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        var fullUrl = window.location.href;
+                        $("#republish").attr("href",fullUrl);
+                        $("#republish").text(fullUrl);
+                    });
+                </script>>
 
                 <br/><br/>
 
