@@ -20,36 +20,29 @@ Unity 有很多内置变换矩阵：
 
 有了这些矩阵，在 vertex shader 中进行顶点变换就可以有多种选择：
 
-{% highlight c %}
-
+```GLSL
 v2f vert (appdata v)
 {
 	v2f o;
 	
-	// 方式一
-	
+	// 方式一	
 	o.vertex = mul(UNITY_MATRIX_P, mul(UNITY_MATRIX_MV, v.vertex));
 	
 	// 方式二
-
 	o.vertex = mul(UNITY_MATRIX_P, mul(UNITY_MATRIX_V, mul(_Object2World, v.vertex)));
 	
-	// 方式三
-	
+	// 方式三	
 	o.vertex = mul(UNITY_MATRIX_VP, mul(_Object2World, v.vertex));
 
-	// 方式四，通过构造一个模型观察投影矩阵，然后变换顶点坐标
-	
+	// 方式四，通过构造一个模型观察投影矩阵，然后变换顶点坐标	
 	float4x4 m = mul(UNITY_MATRIX_P, UNITY_MATRIX_MV);
 	o.vertex = mul(m, v.vertex);
 
-	// 方式五，最常见也是最高效的做法
-	
+	// 方式五，最常见也是最高效的做法	
 	o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
 
 	o.uv = v.uv;
 	return o;
 }
 
-{% endhighlight %}
-
+```
