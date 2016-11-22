@@ -1,5 +1,5 @@
 ---
-title: 缓存命中率
+title: 缓存和性能提升
 header-img: img/fantasy.jpg
 tags: 计算机科学
 published: false
@@ -17,13 +17,17 @@ CPU 的缓存（L1 L2 L3）是 CPU 和内存之间的临时存储器，它的速
 
 + 缓存应该多大？
 
-缓存速度固然很快，但是大部分机器的内存都是非常有限的，尤其是各种移动设备。所以缓存的尺寸应该尽量小，当然如果内存很大，那把所有东西都缓存起来也是可以的！不过绝大部分情况下都不会这么干，因为内存非常宝贵。所以如何利用有限的内存来当做缓存就需要用到巧妙设计的数据结构了。
+缓存速度固然很快，但是大部分机器的内存都是非常有限的，尤其是各种移动设备。所以缓存的尺寸应该尽量小，当然如果内存很大，那把所有东西都缓存起来也是可以的！
 
 ### LRU（Least Recently Used）
+
+LRU 表示“最近最少使用”算法。最简单的 LRU 可以用一个链表实现：
+
+![simple-lru](/post_img/lru/simple-lru.png)
 
 
 参考资料：
 
 + [CPU 缓存](http://baike.baidu.com/link?url=y4C2scvEykfPoMVwIMOiTUyp1usroKviePQIWhLzGUIJ79OlZ33bywVo_fIP9EjG76GQ6Fg_OYRtwie0vFkzHtPOUdPrazp3gbKynb6NnxC)
 + [有效提高命中率的缓存设计](http://www.cnblogs.com/smark/archive/2013/01/23/2874012.html)
-+ [Wikipedia LRU](https://en.wikipedia.org/wiki/Cache_replacement_policies#LRU)
++ [缓存淘汰算法](http://flychao88.iteye.com/blog/1977653)
