@@ -38,8 +38,13 @@ published: true
 
 对于双精度浮点数，精度 15~16 位。取值范围大概是 -1.79769e308~1.79769e308。
 
+下面这个是单精度和双精度浮点数的详细精度范围：
+
+![IEEE754](/post_img/float-precision/IEEE754.png)
+
 参考资料：
 
 + [浮点数精度](http://blog.csdn.net/dxy612/article/details/5518477/)
 + [维基百科 float](https://en.wikipedia.org/wiki/Single-precision_floating-point_format)
 + [维基百科 double](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)
++ [维基百科 IEEE754](https://en.wikipedia.org/wiki/IEEE_floating_point)
