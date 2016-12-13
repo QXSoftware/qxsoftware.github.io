@@ -51,6 +51,11 @@ public class TestCrash : MonoBehaviour
 
 ![logcat](/post_img/unity-crash/logcat.jpg)
 
+而期望的结果是，`Debug.Log(str.Length);`的执行抛出 NullReferenceException 然后被 catch 住，并进一步打印日志。下面是在我的 Samsung NoteII 上进行的相同测试：
+
+![logcat2](/post_img/unity-crash/logcat2.jpg)
+
+可以看到，mono 正确捕获了异常，游戏也没有闪退。
 
 #### 总结
 
