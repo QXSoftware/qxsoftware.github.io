@@ -61,4 +61,4 @@ public class TestCrash : MonoBehaviour
 
 Unity3D 使用的 mono 版本比较旧，bug 不少。这次的闪退完全是由于访问了空引用导致 mono crash，虽然写了 try catch，但是依旧无法避免闪退的发生。所以必须判断是否是空引用。
 
-> 这个闪退只在小米2A上稳定复现，在别的手机上均不会闪退。
+> 这个闪退只在小米2A上稳定复现，在别的手机上均不会闪退。另外，使用 **IL2CPP** 不会闪退。
