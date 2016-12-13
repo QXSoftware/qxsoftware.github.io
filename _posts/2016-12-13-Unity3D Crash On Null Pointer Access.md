@@ -9,7 +9,7 @@ published: true
 
 #### 准备条件
 
-测试设备是小米2A，具体型号参加下图：
+Unity5.3.4f1、小米2A，具体型号参加下图：
 
 ![mi2A](/post_img/unity-crash/mi2A.jpg)
 
