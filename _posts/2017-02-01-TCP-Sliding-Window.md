@@ -9,3 +9,4 @@ published: false
 
 + [SND Pointer](http://www.tcpipguide.com/free/t_TCPSlidingWindowDataTransferandAcknowledgementMech-2.htm)
 + [RCV Pointer](http://www.tcpipguide.com/free/t_TCPSlidingWindowDataTransferandAcknowledgementMech-3.htm)
++ [Very nice example](http://www.tcpipguide.com/free/t_TCPSlidingWindowDataTransferandAcknowledgementMech-5.htm)
