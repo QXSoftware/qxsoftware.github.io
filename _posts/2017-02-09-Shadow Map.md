@@ -5,8 +5,6 @@ header-img: img/elephant.jpg
 published: false
 ---
 
-
-
 ### 传统的阴影映射（Shadow Map）
 
 
