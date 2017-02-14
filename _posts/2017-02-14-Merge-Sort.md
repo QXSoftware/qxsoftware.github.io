@@ -76,4 +76,6 @@ int main()
 
 
 参考资料：
-[Merge sort](https://en.wikipedia.org/wiki/Merge_sort)
+
++ [Merge sort](https://en.wikipedia.org/wiki/Merge_sort)
++ [数据结构、算法可视化](https://visualgo.net/sorting)
