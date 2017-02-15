@@ -59,3 +59,5 @@ int main()
 
 
 参考资料：
+
++ [插入排序](http://www.cnblogs.com/mengdd/archive/2012/11/24/2786490.html)
