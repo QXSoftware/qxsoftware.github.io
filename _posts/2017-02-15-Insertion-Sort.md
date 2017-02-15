@@ -57,7 +57,69 @@ int main()
 
 ```
 
+### 监视哨（Sentinel）
+
+对于上面的插入排序，可以看到在插入的过程中有一个 for 循环，但是 for 循环的判断条件是 `j > -1 && k < arr[j]`。
+这个地方需要执行两个逻辑运算，其中`j > -1`是为了防止下标越界而存在的，`k < arr[j]`才是真正的插入过程的逻辑需求。
+通过设置监视哨可以避免`j > -1`这一步运算，从而大幅提升性能。
+
+改进后的代码：
+
+```c
+
+#include <stdio.h>
+
+static void insertion_sort(int *arr, int len)
+{
+	// int i,j,k;
+	int i,j;
+	if(len == 1)
+		return;
+	for(i = 1; i < len; i++)
+	{
+		if(arr[i] < arr[i - 1])
+		{
+			// k = arr[i];
+			// arr[0] is used for sentinel
+			arr[0] = arr[i];
+			arr[i] = arr[i - 1];
+			// for(j = i - 2; j > -1 && k < arr[j]; j--)
+			for(j = i - 2; arr[0] < arr[j]; j--)
+				arr[j + 1] = arr[j];
+			// arr[j + 1] = k;
+			arr[j + 1] = arr[0];
+		}
+	}
+}
+
+int main()
+{
+	const int LEN = 11;
+	// int data[] = {2,3,1,45,32,6,7,8,-6,9};
+	// the first element is used for sentinel
+	int data[] = {0, 2,3,1,45,32,6,7,8,-6,9};
+	int i;
+
+	printf("Before:\n");
+	for(i = 1; i < LEN; i++)
+		printf("%d ", data[i]);
+	printf("\n");
+
+	insertion_sort(data, LEN);
+
+	printf("After:\n");
+	for(i = 1; i < LEN; i++)
+		printf("%d ", data[i]);
+	printf("\n");
+
+	return 0;
+}
+
+```
+
+
 
 参考资料：
 
 + [插入排序](http://www.cnblogs.com/mengdd/archive/2012/11/24/2786490.html)
++ [插入排序和监视哨](http://blog.csdn.net/xuyangcao123/article/details/51684321)
