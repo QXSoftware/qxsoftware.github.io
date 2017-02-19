@@ -25,24 +25,24 @@ public class DisposableResourceHolder : IDisposable {
     }
 
     public void Close(){
-    	((IDisposable)this).Dispose();
+        ((IDisposable)this).Dispose();
     }
 
     void IDisposable.Dispose(){
-    	if(disposed)
-    		return;
-    	disposed = true;
+        if(disposed)
+            return;
+        disposed = true;
         Dispose(true);
         GC.SuppressFinalize(this);
     }
 
     ~DisposableResourceHolder(){
-    	Dispose(false);
+        Dispose(false);
     }
 
     protected virtual void Dispose(bool disposing){
         if (disposing){
-        	// 释放托管资源
+            // 释放托管资源
             if (resource!= null) resource.Dispose();
         }
         // 释放非托管资源
