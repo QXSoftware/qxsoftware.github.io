@@ -9,3 +9,4 @@ published: false
 
 + [Dispose Pattern](https://msdn.microsoft.com/en-us/library/b1yfkh5e(v=vs.110).aspx)
 + [Implemeting a Dispose Method](https://msdn.microsoft.com/en-us/library/fs2xkftw(v=vs.110).aspx)
++ [.net Finalizer/Dispose](http://stackoverflow.com/questions/898828/finalize-dispose-pattern-in-c-sharp)
