@@ -1,6 +1,6 @@
 ---
 title: C# HttpWebRequest 的正确姿势
-tags: 多线程
+tags: C# .Net 多线程
 header-img: img/autumn2.jpg
 published: false
 ---
