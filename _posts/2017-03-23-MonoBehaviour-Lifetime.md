@@ -7,7 +7,7 @@ published: true
 
 从`MonoBehaviour`继承的脚本类有一个特定的生命周期，可以在`Unity`的文档里面看到：
 
-<img src=/post_img/monobehaviour_flowchart.svg style="max-width: 99999"></img>
+<img src="/post_img/monobehaviour_flowchart.svg" style="max-width: 99999"></img>
 
 一般情况下，一个`MonoBehaviour`的生命周期如下：
 
