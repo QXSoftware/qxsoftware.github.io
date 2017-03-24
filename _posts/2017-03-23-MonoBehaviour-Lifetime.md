@@ -56,7 +56,9 @@ published: true
 
 如果`goA`的`active`是`true`，但是上面的脚本`enable`是`false`，那么`Instantiate`后，脚本只会触发`Awake`，销毁时触发`OnDestroy`。
 
-`OnEnable`和`OnDisable`一定是成对调用。只要触发了`Awake`，则一定会触发`OnDestroy`。
+`OnEnable`和`OnDisable`一定是成对调用。只要触发了`Awake`，则对象销毁时一定会触发`OnDestroy`。
+
+任何生命周期函数都发生在`Instantiate`之后。刚从`AssetBundle`中取出的对象，如果没有`Instantiate`，那这个对象就是个“哑对象”，`Instantiate`之后这个对象就被激活了。
 
 > 以上测试基于 Unity5.3.4f1
 
