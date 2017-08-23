@@ -34,4 +34,6 @@ type[* [const]] variable-name;
 
 其中，type 可以是 int 或者 const int（这是两种不同的类型），后面的两个方括号中的内容可以省略。
 
+参考资料：
 
+![cpp declarations](http://en.cppreference.com/w/cpp/language/declarations)
