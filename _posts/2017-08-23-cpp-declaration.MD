@@ -36,4 +36,4 @@ type[* [const]] variable-name;
 
 参考资料：
 
-![cpp declarations](http://en.cppreference.com/w/cpp/language/declarations)
++ [cpp declarations](http://en.cppreference.com/w/cpp/language/declarations)
