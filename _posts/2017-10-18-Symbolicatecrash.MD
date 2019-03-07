@@ -31,4 +31,5 @@ symbolicatecrash -h
 ```
 
 补充资料：
-+ https://www.jianshu.com/p/b6031c6fa63d
++ [iOS crash符号定位](https://www.jianshu.com/p/b6031c6fa63d)
++ [iOS奔溃地址与dSYM查找](https://zhuanlan.zhihu.com/p/32745589)
