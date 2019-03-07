@@ -29,3 +29,6 @@ chmod +x symbolicatecrash
 ```shell
 symbolicatecrash -h
 ```
+
+补充资料：
++ https://www.jianshu.com/p/b6031c6fa63d
