@@ -17,3 +17,8 @@ published: true
 ### [Unreal Networking Architecture](https://docs.unrealengine.com/udk/Three/NetworkingOverview.html)
 
 Unreal 的网络同步框架详解，非常详细。
+
+
+### [Understanding Fighting Game Networking](http://mauve.mizuumi.net/2012/07/05/understanding-fighting-game-networking/)
+
+讲如何回滚。
