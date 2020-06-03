@@ -19,6 +19,6 @@ published: true
 Unreal 的网络同步框架详解，非常详细。
 
 
-### [Understanding Fighting Game Networking](http://mauve.mizuumi.net/2012/07/05/understanding-fighting-game-networking/)
+### [A guide to understanding netcode](https://www.gamereplays.org/overwatch/portals.php?show=page&name=overwatch-a-guide-to-understanding-netcode)
 
-讲如何回滚。
+网络同步的一些详细概念定义，以及一些经验和建议。
