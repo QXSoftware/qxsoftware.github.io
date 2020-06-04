@@ -33,4 +33,8 @@ Unreal 的网络同步框架详解，非常详细。
 
 ### [多人游戏的网络实现：帧同步和状态同步](https://best33.com/tag/%E7%8A%B6%E6%80%81%E5%90%8C%E6%AD%A5)
 
-关于状态同步的讲解，描述了两种不同的移动同步思路，很好。
+关于状态同步的讲解，描述了两种不同的移动同步思路，很好。文中列举了一些靠谱的文献：
+
++ 云风的 [开发笔记(12) : 位置同步策略](https://blog.codingnow.com/2012/03/dev_note_12.html)
++ Gabriel Gambetta [Fast-Paced Multiplayer (Part III): Entity Interpolation](https://www.gabrielgambetta.com/entity-interpolation.html)
++ Gabriel Gambetta [Fast-Paced Multiplayer (Part IV): Lag Compensation](http://www.gabrielgambetta.com/lag-compensation.html)
