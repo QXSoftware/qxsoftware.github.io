@@ -16,7 +16,7 @@ published: true
 
 ### [Unreal Networking Architecture](https://docs.unrealengine.com/udk/Three/NetworkingOverview.html)
 
-Unreal 的网络同步框架详解，非常详细。
+UDK 的网络同步框架详解，非常详细。虽然 UDK 已经过时了，但是相关的概念以及设计还是可以参考。
 
 
 ### [A guide to understanding netcode](https://www.gamereplays.org/overwatch/portals.php?show=page&name=overwatch-a-guide-to-understanding-netcode)
@@ -38,3 +38,7 @@ Unreal 的网络同步框架详解，非常详细。
 + 云风的 [开发笔记(12) : 位置同步策略](https://blog.codingnow.com/2012/03/dev_note_12.html)
 + Gabriel Gambetta [Fast-Paced Multiplayer (Part III): Entity Interpolation](https://www.gabrielgambetta.com/entity-interpolation.html)
 + Gabriel Gambetta [Fast-Paced Multiplayer (Part IV): Lag Compensation](http://www.gabrielgambetta.com/lag-compensation.html)
+
+### [Latency Compensating Methods in Client/Server In-game Protocol Design and Optimization](https://developer.valvesoftware.com/wiki/Latency_Compensating_Methods_in_Client/Server_In-game_Protocol_Design_and_Optimization)
+
+Valve 的一片讲解网络同步的文章，很全面。
