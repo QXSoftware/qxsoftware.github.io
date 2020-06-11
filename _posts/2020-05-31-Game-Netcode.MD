@@ -42,3 +42,15 @@ UDK 的网络同步框架详解，非常详细。虽然 UDK 已经过时了，�
 ### [Latency Compensating Methods in Client/Server In-game Protocol Design and Optimization](https://developer.valvesoftware.com/wiki/Latency_Compensating_Methods_in_Client/Server_In-game_Protocol_Design_and_Optimization)
 
 Valve 的一片讲解网络同步的文章，很全面。
+
+### [Source Multiplayer Networking](https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking)
+
+Source 引擎的网络同步 wiki。
+
+### Dota2 论坛的网络延迟讨论
+
+Dota2 使用 Source 引擎开发，一些关于网络延迟讨论，相关线索：
+
++ [Unit Response Delay](http://dev.dota2.com/showthread.php?t=527&p=4253&viewfull=1#post4253)，一个叫 Zoid 的 Valve 研发人员解释为何 Dota2 会有延迟的感觉
++ [Input Delay](https://dev.dota2.com/showthread.php?t=63204)
++ [input delay, will it stay?](https://dev.dota2.com/showthread.php?t=7036)
